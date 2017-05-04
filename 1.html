@@ -1,0 +1,91 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+<style type="text/css">
+	/* CSS for responsive iframe */
+/* ========================= */
+
+/* outer wrapper: set max-width & max-height; max-height greater than padding-bottom % will be ineffective and height will = padding-bottom % of max-width */
+#Iframe-Master-CC-and-Rs {
+  max-width: 512px;
+  max-height: 100%; 
+  overflow: hidden;
+}
+
+/* inner wrapper: make responsive */
+.responsive-wrapper {
+  position: relative;
+  height: 0;
+      /* gets height from padding-bottom */
+  
+  /* put following styles (necessary for overflow and scrolling handling on mobile devices) inline in .responsive-wrapper around iframe because not stable in CSS:
+   -webkit-overflow-scrolling: touch; overflow: auto; */ 
+}
+ 
+.responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* padding-bottom = h/w as % -- sets aspect ratio */
+/* YouTube video aspect ratio */
+.responsive-wrapper-wxh-572x612 {
+  padding-bottom: 240%;
+}
+
+/* general styles */
+/* ============== */
+
+
+.set-padding {
+  padding: 0px;
+}
+.set-margin {
+  margin: 0px;
+}
+.center-block-horiz {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+</style>
+
+<!-- embed responsive iframe --> 
+<!-- ======================= -->
+
+<div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+  <div class="responsive-wrapper 
+     responsive-wrapper-wxh-572x612"
+     style="-webkit-overflow-scrolling: touch; overflow: auto;">
+
+    <iframe src="esoDeck_booklet.pdf" width="1400px" height="1500px" type='application/pdf'>
+      <p style="font-size: 110%;"><em><strong>ERROR: </strong>  
+An &#105;frame should be displayed here but your browser version does not support &#105;frames. </em>Please update your browser to its most recent version and try again.</p>
+    </iframe>
+    
+  </div>
+</div>
+
+ <div id="container"> </div>
+    <div id="topbar">   </div>
+     <div id="topbar2">E S O D E C K
+     <div id ="topbar3">
+    <ul>
+    <li><a href="index.html">HOME</a></li>
+     <li><a href="#">INSTRUCTIONS</a></li>
+      <li><a href="../1.html">BOOKLET</a></li>
+      </ul>
+      </div>     
+     </div>
+
+</body>
+</html>
